@@ -1,21 +1,8 @@
-import { BrowserRouter, NavLink, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header/Header';
 
-const Header = (props) => {
-  const navLinks = [
-    {link: '', text: 'главная'},
-    {link: 'rules', text:'правила акции'}, 
-    {link: 'prizes', text: 'призы'}, 
-    {link: 'winners', text: 'победители'}, 
-    {link: 'feedback', text: 'обратная связь'}, 
-    {link: 'login', text: 'войти'}]
-    .map(title => <li><NavLink to={title.link}>{title.text}</NavLink></li>);
-  return (
-    <ul>
-      {navLinks};
-    </ul>
-  )
-};
+
 const Main = (props) => {
   return <div>Main</div>
 }
@@ -27,11 +14,10 @@ const Login = () => <div>there is login</div>;
 
 const App = () => {
   return (
-
     <div className='container'>
       <Header />
       <main>
-        <Route path='' render={() => <Main />} />
+        <Route exact path='' render={() => <Main />} />
         <Route path='/rules' render={() => <Rules />} />
         <Route path='/prizes' render={() => <Prizes />} />
         <Route path='/winners' render={() => <Winners />} />
