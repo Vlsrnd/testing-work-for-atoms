@@ -6,10 +6,10 @@ import Header from './components/Header/Header';
 const Main = (props) => {
   return <div>Main</div>
 };
-const Rules = () => <div>there is rules</div>;
-const Prizes = () => <div>there is prizes</div>;
-const Winners = () => <div>there is winners</div>;
-const Feedback = () => <div>there is feedback</div>;
+const Rules = () => <div className='bigText' >rules</div>;
+const Prizes = () => <div className='bigText' >prizes</div>;
+const Winners = () => <div className='bigText' >winners</div>;
+const Feedback = () => <div className='bigText' >feedback</div>;
 const Login = () => <div>there is login</div>;
 
 const App = () => {

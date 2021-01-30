@@ -12,3 +12,7 @@
   min-height: 100vh;
   padding-top: 100px;
 }
+.bigText {
+  font-size: 5rem;
+  text-align: center;
+}
