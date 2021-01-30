@@ -14,9 +14,9 @@ const Login = () => <div>there is login</div>;
 
 const App = () => {
   return (
-    <div className='container'>
+    <div>
       <Header />
-      <main>
+      <main className='container'>
         <Route exact path='/' render={() => <Main />} />
         <Route path='/rules' render={() => <Rules />} />
         <Route path='/prizes' render={() => <Prizes />} />
