@@ -6,6 +6,27 @@
   height: 63.2vw;
   border-radius: 50%;
   background-color: #0B9045;
-  /* transform: translateY(-63.25%); */
   transform: translateX(-50%) translateY(-43.7%);
+}
+
+.leftConcentricDiv {
+  position: absolute;
+  top: 416px;
+  left: 55px;
+}
+
+.rightTopConcentricDiv {
+  position: absolute;
+  top: 250px;
+  right: 78px;
+}
+.rightTopConcentricDiv img {
+  width: 209px;
+  height: 178px;
+  z-index: 5;
+}
+.rightBottomConcentricDiv {
+  position: absolute;
+  top: 516px;
+  right: 78px;
 }
