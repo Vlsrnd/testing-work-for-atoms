@@ -3,8 +3,9 @@ import styles from './Main.module.css';
 
 import prizesImg from '../../assets/img/prizes.png';
 import superPrizeImg from '../../assets/img/super-prize.png';
+import { CentralImg } from './CentralImg/CentralImg';
 
-const Main = (props) => {
+const Main = () => {
   const text = <div>ЗАРЕГИСТРИРОВАТЬ ЧЕК</div>;
   const prizesImgElement = <img src={prizesImg} alt='prizes' />;
   const superPrizeImgElement = <img src={superPrizeImg} alt='super prize' />;
@@ -21,6 +22,9 @@ const Main = (props) => {
       <div className={styles.rightBottomConcentricDiv}>
         <ConcentricDiv element={superPrizeImgElement}
           width={132} height={129} />
+      </div>
+      <div className={styles.centralImg}>
+        <CentralImg />
       </div>
     </div>
   )

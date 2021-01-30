@@ -30,3 +30,8 @@
   top: 516px;
   right: 78px;
 }
+.centralImg {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

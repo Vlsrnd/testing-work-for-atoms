@@ -1,0 +1,14 @@
+.centralImg {
+  position: relative;
+  border: 1px solid red;
+}
+.centralImg * {
+  position: absolute;
+  bottom: 0;
+}
+.treeAndBottle{
+  left: 26.3%;
+}
+.men{
+  left: 48%;
+}
