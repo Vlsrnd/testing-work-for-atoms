@@ -1,11 +1,8 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
-
-const Main = (props) => {
-  return <div>Main</div>
-};
 const Rules = () => <div className='bigText' >rules</div>;
 const Prizes = () => <div className='bigText' >prizes</div>;
 const Winners = () => <div className='bigText' >winners</div>;
