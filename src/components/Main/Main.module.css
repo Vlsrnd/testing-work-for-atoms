@@ -1,0 +1,11 @@
+.greenCircle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 63.2vw;
+  height: 63.2vw;
+  border-radius: 50%;
+  background-color: #0B9045;
+  /* transform: translateY(-63.25%); */
+  transform: translateX(-50%) translateY(-43.7%);
+}
