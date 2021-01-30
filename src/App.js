@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 
 const Main = (props) => {
   return <div>Main</div>
-}
+};
 const Rules = () => <div>there is rules</div>;
 const Prizes = () => <div>there is prizes</div>;
 const Winners = () => <div>there is winners</div>;
@@ -17,7 +17,7 @@ const App = () => {
     <div className='container'>
       <Header />
       <main>
-        <Route exact path='' render={() => <Main />} />
+        <Route exact path='/' render={() => <Main />} />
         <Route path='/rules' render={() => <Rules />} />
         <Route path='/prizes' render={() => <Prizes />} />
         <Route path='/winners' render={() => <Winners />} />
@@ -30,7 +30,7 @@ const App = () => {
 
 const WrappedApp = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App />
     </BrowserRouter>
   )
