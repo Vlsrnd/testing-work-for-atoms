@@ -12,14 +12,18 @@ const LoginBtn = (props) => {
 
 const Header = (props) => {
   const navLinks = [
-    {link: '', text: 'главная'},
-    {link: 'rules', text:'правила акции'}, 
-    {link: 'prizes', text: 'призы'}, 
-    {link: 'winners', text: 'победители'}, 
-    {link: 'feedback', text: 'обратная связь'}] 
+    {link: '/', text: 'главная', isExact: true},
+    {link: '/rules', text:'правила акции'}, 
+    {link: '/prizes', text: 'призы'}, 
+    {link: '/winners', text: 'победители'}, 
+    {link: '/feedback', text: 'обратная связь'}] 
     .map(title => {
       return (
-        <li><NavLink to={title.link} key={title.link + title.text}>
+        <li><NavLink 
+          exact={title.isExact}
+          to={title.link} 
+          key={title.link + title.text}
+          activeClassName={styles.activeLink}>
           {title.text}
         </NavLink></li>
       );
