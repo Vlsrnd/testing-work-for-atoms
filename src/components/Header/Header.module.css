@@ -24,8 +24,6 @@ a {
   margin-left: 35px;
   margin-top: 35px;
 }
-.navList {
-}
 .navList ul {
   display: flex;
   margin-top: 33px;
@@ -34,4 +32,70 @@ a {
 }
 .navList ul li {
   margin-right: 27px;
+}
+.mobileMenu {
+  display: none;
+}
+
+@media (max-device-width: 960px){
+  .header {
+    height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  .navList a {
+    display: none;
+  }
+  .logoImg {
+    width: 87px;
+    height: 16px;
+    margin-left: 15px;
+    margin-top: 14px;
+    z-index: 2;
+  }
+  .mobileMenu {
+    display: block;
+  }
+  .mobileMenuList {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #007973;
+    list-style: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  .mobileMenuList li {
+    margin-bottom: 20px;
+  }
+  .loginBtn {
+    margin-bottom: 27px;
+  }
+  .mobileMenuIcon {
+    width: 64px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobileMenuIconOpen {
+    background-color: #0B9045;
+  }
+  .mobileMenuIconOpen img {
+    width: 35px;
+    height: 22px;
+  }
+  .mobileMenuIconClose {
+    display: flex;
+    width: 100%;
+    padding-right: 20px;
+    justify-content: flex-end;
+  }
+  .mobileMenuIconClose img {
+    width: 24px;
+    height: 24px;
+  }
+
 }
