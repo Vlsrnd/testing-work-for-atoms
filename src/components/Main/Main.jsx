@@ -4,6 +4,7 @@ import styles from './Main.module.css';
 import prizesImg from '../../assets/img/prizes.png';
 import superPrizeImg from '../../assets/img/super-prize.png';
 import centralImg from '../../assets/img/centralImg.png';
+import mobileCentralImg from '../../assets/img/centralImg-mobile.png';
 import logo from '../../assets/img/logo.png';
 
 const Main = () => {
@@ -24,8 +25,10 @@ const Main = () => {
       </div>
       <div className={styles.centralColumn}>
         <div className={styles.centralImg}>
-          <img src={centralImg} 
-            alt='bottle tree and men' /> 
+          <img src={centralImg} alt='bottle tree and men' /> 
+        </div>
+        <div className={styles.mobileCentralImg}>
+          <img src={mobileCentralImg} alt='bottle tree and men' />
         </div>
         <div className={styles.mobileBill}>{billText}</div>
         <div className={styles.mobileRules}>Правила акции</div>
