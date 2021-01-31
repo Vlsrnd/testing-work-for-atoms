@@ -23,10 +23,9 @@ const NavLinks = () => {
       {link: '/feedback', text: 'обратная связь'},
     ].map(title => {
         return (
-          <li><NavLink 
+          <li key={title.link + title.text}><NavLink 
             exact={title.isExact}
             to={title.link} 
-            key={title.link + title.text}
             activeClassName={styles.activeLink}>
             {title.text}
           </NavLink></li>

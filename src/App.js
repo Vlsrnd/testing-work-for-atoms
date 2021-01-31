@@ -3,15 +3,15 @@ import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 
-const Rules = () => <div className='bigText' >rules</div>;
-const Prizes = () => <div className='bigText' >prizes</div>;
-const Winners = () => <div className='bigText' >winners</div>;
-const Feedback = () => <div className='bigText' >feedback</div>;
+const Rules = () => <div className='emptyPage' >rules</div>;
+const Prizes = () => <div className='emptyPage' >prizes</div>;
+const Winners = () => <div className='emptyPage' >winners</div>;
+const Feedback = () => <div className='emptyPage' >feedback</div>;
 const Login = () => <div>there is login</div>;
 
 const App = () => {
   return (
-    <div>
+    <div className='app'>
       <Header />
       <main className='container'>
         <Route exact path='/' render={() => <Main />} />

@@ -8,11 +8,11 @@
 }
 a {
   color: #fff;
+  font-family: 'pf-din-text-medium', monospace;
   font-size: 20px;
   font-weight: 700;
-  font-family: monospace;
   text-transform: uppercase;
-  font-weight: ;
+  font-weight: 700;
   opacity: 0.6;
   text-decoration: none;
 }
@@ -42,15 +42,16 @@ a {
   .header {
     height: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: #007973;
   }
-  .navList a {
+  .navList {
     display: none;
   }
   .logoImg {
     width: 87px;
     height: 16px;
     margin-left: 15px;
-    margin-top: 14px;
+    margin-top: 16px;
     z-index: 2;
   }
   .mobileMenu {
