@@ -4,6 +4,7 @@
   opacity: 0;
 }
 .customCheckbox+label {
+  width: 100%;
   display: inline-flex;
   align-items: center;
   user-select: none;
