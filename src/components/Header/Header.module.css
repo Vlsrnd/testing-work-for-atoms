@@ -6,7 +6,8 @@
   display: flex;
   justify-content: space-between;
 }
-.header a {
+.header a,
+.loginBtn {
   color: #fff;
   font-family: 'pf-din-text-medium', monospace;
   font-size: 20px;
@@ -15,6 +16,7 @@
   font-weight: 700;
   opacity: 0.6;
   text-decoration: none;
+  cursor: pointer;
 }
 .activeLink {
   opacity: 1;

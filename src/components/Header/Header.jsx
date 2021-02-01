@@ -6,11 +6,11 @@ import logoImg from '../../assets/img/logo.png';
 import mobileMenuBtnImg from '../../assets/img/mobile-menu-btn.png';
 import mobileMenuBtnCloseImg from '../../assets/img/mobile-menu-btn-close.png';
 
-const LoginBtn = (props) => {
+const LoginBtn = ({isAuth, userName, isMobile, showAuthorization}) => {
   return (
-    <NavLink to='login' className={styles.loginBtn}>
-      {props.isAuth ? props.userName : props.isMobile ? 'ЛИЧНЫЙ КАБИНЕТ' : 'ВОЙТИ'}
-    </NavLink>
+    <div className={styles.loginBtn} onClick={showAuthorization}>
+      {isAuth ? userName : isMobile ? 'ЛИЧНЫЙ КАБИНЕТ' : 'ВОЙТИ'}
+    </div>
   )
 };
 
@@ -33,7 +33,7 @@ const NavLinks = () => {
       });
 };
 
-const MobileMenu = (props) => {
+const MobileMenu = ({isAuth, showAuthorization}) => {
   const [isOpen, setState] = useState(false);
   const openCloseMenu = () => setState(prevState => !prevState);
   return (
@@ -48,24 +48,24 @@ const MobileMenu = (props) => {
             <img src={mobileMenuBtnCloseImg} alt='close' />
           </div>
           <NavLinks />
-          <LoginBtn isAuth={props.isAuth} isMobile={true} />
+          <LoginBtn isAuth={isAuth} isMobile={true} showAuthorization={showAuthorization} />
         </ul>
       )}
     </div>
   )
 };
 
-const Header = (props) => {
+const Header = ({isAuth, showAuthorization}) => {
   return (
     <header className={styles.header}>
       <img className={styles.logoImg} src={logoImg} alt='logo'></img>
       <nav className={styles.navList}>
         <ul>
           <NavLinks />
-          <LoginBtn isAuth={props.isAuth}/>
+          <LoginBtn isAutn={isAuth} showAuthorization={showAuthorization} />
         </ul>
       </nav>
-      <MobileMenu {...props} />
+      <MobileMenu />
     </header>
   )
 };
