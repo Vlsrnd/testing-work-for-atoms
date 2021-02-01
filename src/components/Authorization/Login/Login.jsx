@@ -2,13 +2,14 @@ import { useForm } from 'react-hook-form';
 import styles from './Login.module.css';
 
 import closeBtn from '../../../assets/img/mobile-menu-btn-close.svg';
+import { getPublicToken } from '../../../api/api';
 
 export const Login = ({setRegistrationMode, hideAuthorization}) => {
   const {register, handleSubmit, errors} = useForm({
     mode: 'onTouched',
     shouldFocusError: false
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = () => getPublicToken();
   return (
     <div className={styles.login}>
       <form onSubmit={handleSubmit(onSubmit)}>
