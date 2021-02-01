@@ -22,7 +22,7 @@
   background-size: 11px 8px;
 }
 .customCheckbox:checked+label .box {
-  background-image: url('../../assets/img/custom-checkbox.png');
+  background-image: url('../../assets/img/custom-checkbox.svg');
 }
 .box:hover {
   border-width: 3px;
