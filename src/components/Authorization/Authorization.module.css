@@ -1,0 +1,18 @@
+.modal {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+@supports not (backdrop-filter: blur(10px)) {
+  .modal {
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
