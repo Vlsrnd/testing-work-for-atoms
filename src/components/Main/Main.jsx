@@ -5,7 +5,7 @@ import prizesImg from '../../assets/img/prizes.png';
 import superPrizeImg from '../../assets/img/super-prize.png';
 import centralImg from '../../assets/img/centralImg.png';
 import mobileCentralImg from '../../assets/img/centralImg-mobile.png';
-import logo from '../../assets/img/logo.png';
+import logo from '../../assets/img/logo.svg';
 
 const Main = () => {
   const billText = <div>ЗАРЕГИСТРИРОВАТЬ ЧЕК</div>;

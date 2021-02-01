@@ -3,9 +3,9 @@ import { CustomCheckbox } from '../../common/CustomCheckbox';
 import InputMask from 'react-input-mask';
 import styles from './Registration.module.css';
 
-import attentionImg from '../../../assets/img/attention.png';
-import commonErrorCloseImg from '../../../assets/img/red-close.png';
-import closeBtn from '../../../assets/img/mobile-menu-btn-close.png';
+import attentionImg from '../../../assets/img/attention.svg';
+import commonErrorCloseImg from '../../../assets/img/red-close.svg';
+import closeBtn from '../../../assets/img/mobile-menu-btn-close.svg';
 
 const CommonError = ({clearErrors}) => {
   return (
@@ -54,7 +54,7 @@ export const Registration = ({setLoginMode, hideAuthorization}) => {
           <input ref={register({required: true})} name='email' 
             className={errors.email && styles.error} type='email' placeholder='E-mail' />
           <InputMask mask="+7 (999) 999-99-99" placeholder='Телефон'
-            inputRef={register({required: true, pattern: /\+[0-9]\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/})} 
+            inputRef={register({required: true, pattern: /\+[0-9]\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/})} 
             name='phone' className={errors.phone && styles.error} />
         </div>
         <div className={`${styles.customCheckbox} ${styles.rulesCheckbox}`}>

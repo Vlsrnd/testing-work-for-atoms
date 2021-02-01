@@ -1,6 +1,6 @@
 .main {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding-top: 65px;
   background-color: #007973;
   position: relative;
@@ -118,6 +118,8 @@
 @media (max-device-width: 1320px){
   .main {
     padding-top: 50px;
+    height: auto;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
   }

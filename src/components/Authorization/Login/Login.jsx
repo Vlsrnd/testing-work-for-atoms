@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import styles from './Login.module.css';
 
-import closeBtn from '../../../assets/img/mobile-menu-btn-close.png';
+import closeBtn from '../../../assets/img/mobile-menu-btn-close.svg';
 
 export const Login = ({setRegistrationMode, hideAuthorization}) => {
   const {register, handleSubmit, errors} = useForm({
