@@ -2,9 +2,9 @@ import styles from './Header.module.css';
 import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 
-import logoImg from '../../assets/img/logo.png';
-import mobileMenuBtnImg from '../../assets/img/mobile-menu-btn.png';
-import mobileMenuBtnCloseImg from '../../assets/img/mobile-menu-btn-close.png';
+import logoImg from '../../assets/img/logo.svg';
+import mobileMenuBtnImg from '../../assets/img/mobile-menu-btn.svg';
+import mobileMenuBtnCloseImg from '../../assets/img/mobile-menu-btn-close.svg';
 
 const LoginBtn = ({isAuth, userName, isMobile, showAuthorization}) => {
   return (
@@ -65,7 +65,7 @@ const Header = ({isAuth, showAuthorization}) => {
           <LoginBtn isAutn={isAuth} showAuthorization={showAuthorization} />
         </ul>
       </nav>
-      <MobileMenu />
+      <MobileMenu showAuthorization={showAuthorization} />
     </header>
   )
 };
