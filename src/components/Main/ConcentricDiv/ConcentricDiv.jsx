@@ -5,9 +5,13 @@ const ConcentricDiv = ({element, width = 120, height = 120, numberLines = 2}) =>
     width: width + 'px',
     height: height + 'px'
   };
-  return (
-    <div className={styles.withWrapper} style={style} >
-      {numberLines === 3 && <div className={styles.additionalLine}></div>}
+  if (numberLines === 3) return (
+    <div className={styles.withWrapperThree} style={style}>
+      <div className={styles.additionalLine}></div>
+      {element}
+    </div>)
+  else return (
+    <div className={styles.withWrapperTwo} style={style}>
       {element}
     </div>
   )

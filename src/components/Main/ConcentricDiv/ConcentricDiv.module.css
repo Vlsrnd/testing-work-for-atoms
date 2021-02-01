@@ -1,4 +1,5 @@
-.withWrapper {
+.withWrapperThree,
+.withWrapperTwo {
   background-color: #0B9044;
   position: relative;
   border-radius: 9999px;
@@ -7,8 +8,10 @@
   justify-content: center;
   align-items: center;
 }
-.withWrapper::before,
-.withWrapper::after {
+.withWrapperThree::before,
+.withWrapperThree::after,
+.withWrapperTwo::before,
+.withWrapperTwo::after {
   content: '';
   position: absolute;
   top: -7px;
@@ -20,17 +23,31 @@
   border: 2px solid #0B9044;
   opacity: 0.9;
 }
-.withWrapper::before {
+.withWrapperThree::before,
+.withWrapperTwo::before {
   animation: pulse2px 1s ease-in-out 0s infinite;
 }
-.withWrapper::after {
+.withWrapperThree::after,
+.withWrapperTwo::after{
   top: -14px;
   left: -14px;
   width: calc(100% + 28px);
   height: calc(100% + 28px);
   border: 1px solid #0B9044;
   opacity: 0.8;
-  animation: pulse1px 1s ease-in-out 1s infinite;
+  animation: pulse1px 1s ease-in-out 0.5s infinite;
+}
+.withWrapperTwo::before {
+  top: -12px;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+}
+.withWrapperTwo::after {
+  top: -27px;
+  left: -27px;
+  width: calc(100% + 54px);
+  height: calc(100% + 54px);
 }
 .additionalLine::before {
   content: '';
@@ -43,7 +60,7 @@
   background-color: transparent;
   border: 0.5px solid #0B9044;
   opacity: 0.7;
-  animation: pulse05px 1s ease-in-out 2s infinite;
+  animation: pulse05px 1s ease-in-out 1s infinite;
 }
 
 @keyframes pulse2px {
