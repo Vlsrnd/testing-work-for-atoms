@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { CustomCheckbox } from '../../common/CustomCheckbox';
+import InputMask from 'react-input-mask';
 import styles from './Registration.module.css';
 
 import attentionImg from '../../../assets/img/attention.png';
@@ -49,10 +50,12 @@ export const Registration = ({setLoginMode, hideAuthorization}) => {
             className={errors.last_name && styles.error} type='text' placeholder='Фамилия' />
         </div>
         <div className={styles.emailPhone}>
+
           <input ref={register({required: true})} name='email' 
             className={errors.email && styles.error} type='email' placeholder='E-mail' />
-          <input ref={register({required: true})} name='phone' 
-            className={errors.phone && styles.error} type='phone' placeholder='Телефон' />
+          <InputMask mask="+7 (999) 999-99-99" placeholder='Телефон'
+            inputRef={register({required: true, pattern: /\+[0-9]\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/})} 
+            name='phone' className={errors.phone && styles.error} />
         </div>
         <div className={`${styles.customCheckbox} ${styles.rulesCheckbox}`}>
           <CustomCheckbox name='rules' label={rules} 
