@@ -17,6 +17,15 @@
 .registration form {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.closeBtn {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 .registration header {
   font-family: 'pf-din-text-medium', monospace;
@@ -44,9 +53,10 @@
   height: 56px;
   border-radius: 8px;
   font-family: 'gilroy', monospace;
+  color: #0B9045;
   font-size: 18px;
   padding-left: 8px;
-  border: none;
+  border-bottom: 2px solid #A2CA7A;
   margin: 0;
 }
 
@@ -90,6 +100,8 @@
 .commonErrorClose {
   height: 100%;
   width: 36px;
+  flex-grow: 0;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;

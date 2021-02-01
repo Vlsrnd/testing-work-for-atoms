@@ -4,9 +4,9 @@ import styles from './Registration.module.css';
 
 import attentionImg from '../../../assets/img/attention.png';
 import commonErrorCloseImg from '../../../assets/img/red-close.png';
-import { useState } from 'react';
+import closeBtn from '../../../assets/img/mobile-menu-btn-close.png';
 
-const CommonError = ({hideCommonError}) => {
+const CommonError = ({clearErrors}) => {
   return (
     <div className={styles.commonError}>
       <div className={styles.attention}>
@@ -15,18 +15,18 @@ const CommonError = ({hideCommonError}) => {
       <div className={styles.commonErrorText}>Внимание! Одно или несколько полей не 
       заполнены или заполнены неверно. Проверь корректность заполнения полей.</div>
       <div className={styles.commonErrorClose}>
-        <img src={commonErrorCloseImg} alt='X' onClick={hideCommonError}/>
+        <img src={commonErrorCloseImg} alt='X' onClick={() => clearErrors()}/>
       </div>
     </div>
   )
 };
 
-export const Registration = ({setLoginMode}) => {
-  const {register, handleSubmit, errors} = useForm();
+export const Registration = ({setLoginMode, hideAuthorization}) => {
+  const {register, handleSubmit, errors, clearErrors} = useForm({
+    mode: 'onTouched',
+    shouldFocusError: false
+  });
   const onSubmit = (data) => console.log(data);
-  const [isCommonErrorVisible, setCommonErrorVisible] = useState(false);
-  const showCommonError = () => setCommonErrorVisible(true);
-  const hideCommonError = () => setCommonErrorVisible(false);
 
   const rules = (
     <div>Я прочитал и согласен с 
@@ -40,6 +40,7 @@ export const Registration = ({setLoginMode}) => {
   return (
     <div className={styles.registration}>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <img className={styles.closeBtn} src={closeBtn} alt='X' onClick={hideAuthorization} />
         <header>Регистрация</header>
         <div className={styles.firstNameLastName}>
           <input ref={register({required: true})} name='first_name' 
@@ -65,8 +66,7 @@ export const Registration = ({setLoginMode}) => {
         <CustomCheckbox name='agreements_sms' label={agreementsSms} 
           reactHookFormRegister={register} />
         </div>
-        {isCommonErrorVisible && <CommonError hideCommonError={hideCommonError} />}
-        {!!Object.keys(errors).length && showCommonError()}
+        {!!Object.keys(errors).length && <CommonError clearErrors={clearErrors}/>}
         <button className={styles.submitBtn} type='submit'>ЗАРЕГИСТРИРОВАТЬСЯ</button>
       </form>
         <button onClick={setLoginMode} className={styles.autorizeBtn}>АВТОРИЗОВАТЬСЯ</button>
