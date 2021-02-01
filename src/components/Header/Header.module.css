@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
 }
-a {
+.header a {
   color: #fff;
   font-family: 'pf-din-text-medium', monospace;
   font-size: 20px;
@@ -99,5 +99,4 @@ a {
     width: 24px;
     height: 24px;
   }
-
 }
