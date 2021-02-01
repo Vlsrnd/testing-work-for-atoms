@@ -1,0 +1,149 @@
+.registration {
+  width: 600px;
+  height: 620px;
+  z-index: 10;
+  padding: 40px 60px 0 60px;
+  background-color: #007973;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+.registration .error {
+  color: red;
+  border-bottom: 2px solid red;
+}
+.registration form {
+  display: flex;
+  flex-direction: column;
+}
+.registration header {
+  font-family: 'pf-din-text-medium', monospace;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+.firstNameLastName,
+.emailPhone {
+  padding: 0;
+  margin-top: 28px;
+  display: flex;
+}
+.emailPhone {
+  margin-top: 25px;
+}
+.firstNameLastName input:first-child,
+.emailPhone input:first-child {
+  margin-right: 20px;
+}
+.registration input {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  font-family: 'gilroy', monospace;
+  font-size: 18px;
+  padding-left: 8px;
+  border: none;
+  margin: 0;
+}
+
+.customCheckbox {
+  text-align: left;
+  margin-top: 20px;
+}
+.customCheckbox,
+.customCheckbox a {
+  font-family: 'gilroy', 'roboto' monospace;
+  font-size: 14px;
+  color: #fff;
+}
+.customCheckbox a {
+  color: #a2ca7a;
+  text-decoration: underline;
+  text-transform: none;
+  cursor: pointer;
+}
+.rulesCheckbox {
+  margin-top: 20px;
+}
+.emailCheckbox,
+.smsCheckbox {
+  margin-top: 14px;
+}
+
+.commonError {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  margin-top: 35px;
+  color: red;
+  font-family: 'gilroy', monospace;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.attention,
+.commonErrorClose {
+  height: 100%;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.attention>img {
+  width: 16px;
+  height: 16px;
+}
+.commonErrorText {
+  padding-left: 11px;
+}
+.commonErrorClose>img {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.submitBtn,
+.autorizeBtn {
+  width: 348px;
+  height: 55px;
+  border-radius: 37px;
+  align-self: center;
+  background-color: #0B9045;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'gilroy', monospace;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.autorizeBtn {
+  margin-top: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  
+}
+
+@media (max-device-width: 500px){
+  .submitBtn,
+  .autorizeBtn {
+    width: 250px;
+  }
+  .registration {
+    height: 100%;
+  }
+  .firstNameLastName,
+  .emailPhone {
+    flex-direction: column;
+    margin: 0;
+  }
+  .registration input {
+    margin: 0;
+    margin-top: 20px;
+  }
+}
