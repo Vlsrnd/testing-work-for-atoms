@@ -45,6 +45,9 @@
   min-height: 100vh;
 }
 .emptyPage {
+  font-family: 'pf-din-text-bold', monospace;
+  text-transform: uppercase;
+  color: #fff;
   font-size: 5rem;
   text-align: center;
   padding-top: 65px;
