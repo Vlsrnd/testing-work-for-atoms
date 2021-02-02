@@ -9,6 +9,7 @@ const Rules = () => <div className='emptyPage' >rules</div>;
 const Prizes = () => <div className='emptyPage' >prizes</div>;
 const Winners = () => <div className='emptyPage' >winners</div>;
 const Feedback = () => <div className='emptyPage' >feedback</div>;
+const Profile = ({state}) => <div className='emptyPage'>Личный кабинет</div>;
 
 const App = () => {
   const [isAuthorizationVisible, setAuthorizationVisibility] = useState(false);
@@ -30,6 +31,7 @@ const App = () => {
         <Route path='/prizes' render={() => <Prizes />} />
         <Route path='/winners' render={() => <Winners />} />
         <Route path='/feedback' render={() => <Feedback />} />
+        <Route path='/profile' render={() => <Profile state={state} />} />
       </main>
     </div>
   );
