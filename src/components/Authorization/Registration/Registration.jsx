@@ -41,9 +41,14 @@ export const Registration = ({setLoginMode, hideAuthorization}) => {
 
   const onSubmit = async (formData) => {
     block();
-    const response = await requestToRegisterUser(formData);
-    setNotificationText(response.alert);
-    setVisibleNotification(true);
+    try {
+      const response = await requestToRegisterUser(formData);
+      setNotificationText(response.alert);
+      setVisibleNotification(true);
+    } catch (err) {
+      alert(`Что-то пошло не так, обратитесь в службу поддержки. ${err}`);
+      unblock();
+    }
   };
 
   const rules = (

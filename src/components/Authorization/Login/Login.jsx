@@ -1,10 +1,12 @@
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+
+import { Notification } from '../Notification/Notification';
+import { requestToAuthorize } from '../../../api/api';
+
 import styles from './Login.module.css';
 
 import closeBtn from '../../../assets/img/mobile-menu-btn-close.svg';
-import { requestToAuthorize } from '../../../api/api';
-import { useState } from 'react';
-import { Notification } from '../Notification/Notification';
 
 export const Login = ({setRegistrationMode, hideAuthorization, setAuth, setState}) => {
   const [isNotificationVisible, setVisibleNotification] = useState(false);
@@ -28,7 +30,7 @@ export const Login = ({setRegistrationMode, hideAuthorization, setAuth, setState
       setAuth(true);
       setState(data);
     } catch (err) {
-      alert(err);
+      alert(`Что-то пошло не так, обратитесь в службу поддержки. ${err}`);
       unblock();
     }
   }
