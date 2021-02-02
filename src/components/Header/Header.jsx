@@ -6,12 +6,16 @@ import logoImg from '../../assets/img/logo.svg';
 import mobileMenuBtnImg from '../../assets/img/mobile-menu-btn.svg';
 import mobileMenuBtnCloseImg from '../../assets/img/mobile-menu-btn-close.svg';
 
-const LoginBtn = ({isAuth, userName, isMobile, showAuthorization}) => {
-  return (
-    <div className={styles.loginBtn} onClick={showAuthorization}>
-      {isAuth ? userName : isMobile ? 'ЛИЧНЫЙ КАБИНЕТ' : 'ВОЙТИ'}
-    </div>
-  )
+const LoginBtn = ({isAuth, userName = 'HERO', isMobile, showAuthorization}) => {
+  if (isAuth) {
+    return (
+    <NavLink to={'/profile'} activeClassName={styles.activeLink}>{userName}</NavLink>
+  )} else {
+    return (
+      <div className={styles.loginBtn} onClick={showAuthorization}>
+        {isMobile ? 'ЛИЧНЫЙ КАБИНЕТ' : 'ВОЙТИ'}
+      </div>
+    )}
 };
 
 const NavLinks = () => {
@@ -62,7 +66,7 @@ const Header = ({isAuth, showAuthorization}) => {
       <nav className={styles.navList}>
         <ul>
           <NavLinks />
-          <LoginBtn isAutn={isAuth} showAuthorization={showAuthorization} />
+          <LoginBtn isAuth={isAuth} showAuthorization={showAuthorization} />
         </ul>
       </nav>
       <MobileMenu showAuthorization={showAuthorization} />
