@@ -134,6 +134,15 @@
   cursor: pointer;
   margin-top: 20px;
 }
+.submitBtn:disabled {
+  background-color: #333;
+  color: #777;
+}
+
+.autorizeBtn:disabled{
+  border-color: #333 ;
+  color: #777;
+}
 .autorizeBtn {
   margin-top: 10px;
   background-color: transparent;
