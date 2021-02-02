@@ -46,7 +46,7 @@ export const requestToRegisterUser = async(formData) => {
 };
 
 const getPrivateToken = (formData) => {
-  const {username='vlsrnd@gmail.com', password='493621'} = formData;
+  const {username, password='493621'} = formData;
   return axios({
     url: "https://tw-2020.itest.atoms.ru/backend/api/oauth/token",
     method: "post",
