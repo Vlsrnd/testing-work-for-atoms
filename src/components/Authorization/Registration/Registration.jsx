@@ -1,7 +1,10 @@
 import { useForm } from 'react-hook-form';
-import { CustomCheckbox } from '../../common/CustomCheckbox';
 import InputMask from 'react-input-mask';
+
 import styles from './Registration.module.css';
+
+import { CustomCheckbox } from '../../common/CustomCheckbox';
+import { requestToRegisterUser } from '../../../api/api';
 
 import attentionImg from '../../../assets/img/attention.svg';
 import commonErrorCloseImg from '../../../assets/img/red-close.svg';
@@ -27,7 +30,10 @@ export const Registration = ({setLoginMode, hideAuthorization}) => {
     mode: 'onTouched',
     shouldFocusError: false
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (formData) => {
+    const response = await requestToRegisterUser(formData);
+    console.log(response)
+  };
 
   const rules = (
     <div>Я прочитал и согласен с 
@@ -62,7 +68,7 @@ export const Registration = ({setLoginMode, hideAuthorization}) => {
             reactHookFormRegister={register({required: true})} errors={errors.rules} />
         </div>
         <div className={`${styles.customCheckbox} ${styles.emailCheckbox}`}>
-          <CustomCheckbox name='agreements_email' label={agreementsEmail} 
+          <CustomCheckbox name='agreements' label={agreementsEmail} 
             reactHookFormRegister={register} />
         </div>
         <div className={`${styles.customCheckbox} ${styles.smsCheckbox}`}>
