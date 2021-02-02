@@ -96,7 +96,8 @@
   margin-top: 8px;
 }
 
-.login button {
+.submitBtn,
+.registrationBtn {
   width: 348px;
   height: 55px;
   border-radius: 37px;
@@ -109,10 +110,18 @@
   cursor: pointer;
   margin-top: 20px;
 }
-.login button:nth-child(2) {
+.registrationBtn {
   margin-top: 10px;
   background-color: transparent;
   border: 2px solid #fff;
+}
+.submitBtn:disabled {
+  background-color: #333;
+  color: #777;
+}
+.registrationBtn:disabled {
+  border-color: #333 ;
+  color: #777;
 }
 
 @media (max-device-width: 500px){
