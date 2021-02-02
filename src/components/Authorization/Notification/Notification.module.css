@@ -1,0 +1,25 @@
+.notification {
+  position: absolute;
+  background-color: #007973;
+  width: 320px;
+  padding: 20px;
+  z-index: 15;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+.text,
+.ok {
+  font-family: 'gilroy', monospace;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.ok {
+  border: 2px solid #fff;
+  width: 280px;
+  height: 60px;
+  border-radius: 9999px;
+  background-color: transparent;
+  cursor: pointer;
+}
