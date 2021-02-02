@@ -71,21 +71,25 @@ const getPrivateToken = (formData) => {
   }).then(response => response.data)
 }
 
-export const requestToAuthorize = async (formData) => {
-  const response =  await getPrivateToken(formData);
-  const message = response.message.alert;
-  const {access_token, expires_in, refresh_token} = response.data;
-  console.log(access_token);
-};
-
 export const getUserData = (privateToken) => {
   return axios({
     url: 'https://pepsi-lays-2020.itest.atoms.ru/backend/api/lk/get',
     method: 'get',
     headers: {
-      "Authorization": `Bearer ${privateToken}`
+      "Authorization": `Bearer ${privateToken}`,
+      "Content-Type": "application/json"
     }})
 };
+
+export const requestToAuthorize = async (formData) => {
+  const response =  await getPrivateToken(formData);
+  const message = response.message.alert;
+  const {access_token, expires_in, refresh_token} = response.data;
+  const dataResponse = await getUserData(access_token);
+  console.log(dataResponse);
+};
+
+
 
 window.test = requestToAuthorize;
 window.getUserData = getUserData;
