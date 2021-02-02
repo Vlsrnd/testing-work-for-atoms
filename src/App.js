@@ -12,12 +12,18 @@ const Feedback = () => <div className='emptyPage' >feedback</div>;
 
 const App = () => {
   const [isAuthorizationVisible, setAuthorizationVisibility] = useState(false);
+  const [isAuth, setAuth] = useState(false);
+  const [state, setState] = useState({});
+
   const showAuthorization = () => setAuthorizationVisibility(true);
   const hideAuthorization = () => setAuthorizationVisibility(false);
+  
   return (
     <div className='app'>
-      <Header showAuthorization={showAuthorization} />
-      {isAuthorizationVisible && <Authorization hideAuthorization={hideAuthorization}/>}
+      <Header showAuthorization={showAuthorization} isAuth={isAuth} state={state} />
+      {isAuthorizationVisible && 
+        <Authorization hideAuthorization={hideAuthorization} setAuth={setAuth} 
+          setState={setState} />}
       <main className='container'>
         <Route exact path='/' render={() => <Main />} />
         <Route path='/rules' render={() => <Rules />} />
