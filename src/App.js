@@ -20,7 +20,7 @@ const App = () => {
   
   return (
     <div className='app'>
-      <Header showAuthorization={showAuthorization} isAuth={isAuth} state={state} />
+      <Header showAuthorization={showAuthorization} isAuth={isAuth} />
       {isAuthorizationVisible && 
         <Authorization hideAuthorization={hideAuthorization} setAuth={setAuth} 
           setState={setState} />}
