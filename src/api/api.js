@@ -2,14 +2,14 @@ import * as axios from "axios";
 
 export const getPublicToken = () => {
   return axios({
-    url: 'https://tw-2020.itest.atoms.ru/backend/api/oauth/token',
-    method: 'post',
+    url: "https://tw-2020.itest.atoms.ru/backend/api/oauth/token",
+    method: "post",
     headers: {
-      Authorization: 'Basic 0cZaC2xmxqC4e92keDTHkTbcRCaGgPHVjYJQZkxH'
+      "Authorization": "Basic 0cZaC2xmxqC4e92keDTHkTbcRCaGgPHVjYJQZkxH"
     },
     auth: {
-      username: '1',
-      password: '6VnbRlpgkYdbevd564PEv8kBW6IR97rvWv8ZDZbh'
+      username: "1",
+      password: "6VnbRlpgkYdbevd564PEv8kBW6IR97rvWv8ZDZbh"
     },
     data: {
       grant_type: "client_credentials"
@@ -17,32 +17,32 @@ export const getPublicToken = () => {
   }).then(response => response.data)
 };
 
-export const requestToRegisterUser = (publicToken) => {
+
+export const requestToRegistration = (publicToken, formData) => {
+  const {first_name, last_name, phone, email, rules, agreements} = formData;
+  const handledPhone = phone.slice(2).match(/[0-9]/g).join('');
   return axios({
-    url: 'http://tw-2020.itest.atoms.ru/backend/api/user/register',
-    method: 'post',
+    url: "https://tw-2020.itest.atoms.ru/backend/api/user/register",
+    method: "post",
     headers: {
-      Authorization: `Bearer ${publicToken}`
+      "Authorization": `Bearer ${publicToken}`,
+      "Content-Type": "application/json"
     },
     data: {
-      // grant_type: "client_credentials",
-      first_name: 'first_name_vls',
-      last_name: 'last_name_vls',
-      phone: '+7 (333) 879-98-98',
-      email: 'vlsrnd@gmail.com',
-      rules: 'true',
-      gender: 'male',
-      agreements: 'false'
+      "first_name": first_name,
+      "last_name": last_name,
+      "phone": handledPhone,
+      "email": email,
+      "rules": rules,
+      "agreements": agreements
     }
-  }).then(response => response.data)
+  })
 };
 
-const test = async() => {
-  const publicTokenResponseData = await getPublicToken();
-  console.log(publicTokenResponseData)
-  const publicToken = publicTokenResponseData.data.access_token;
-  const register = await requestToRegisterUser(publicToken)
-  console.log(register)
-}
 
-window.test = test;
+export const requestToRegisterUser = async(formData) => {
+  const publicTokenResponseData = await getPublicToken();
+  const publicToken = publicTokenResponseData.data.access_token;
+  const register = await requestToRegistration(publicToken, formData);
+  return register.data.message
+}
