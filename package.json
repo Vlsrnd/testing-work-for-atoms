@@ -2,6 +2,7 @@
   "name": "borjomi",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vlsrnd.github.io/testing-work-for-atoms",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
