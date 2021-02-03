@@ -2,8 +2,8 @@ import styles from './ConcentricDiv.module.css';
 
 const ConcentricDiv = ({element, width = 120, height = 120, numberLines = 2}) => {
   const style = {
-    width: width + 'px',
-    height: height + 'px'
+    minWidth: width + 'px',
+    height: height + 'px',
   };
   if (numberLines === 3) return (
     <div className={styles.withWrapperThree} style={style}>
