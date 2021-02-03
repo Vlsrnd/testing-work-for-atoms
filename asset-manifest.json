@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/testing-work-for-atoms/static/css/main.956afcee.chunk.css",
-    "main.js": "/testing-work-for-atoms/static/js/main.eabaaa93.chunk.js",
-    "main.js.map": "/testing-work-for-atoms/static/js/main.eabaaa93.chunk.js.map",
+    "main.css": "/testing-work-for-atoms/static/css/main.7c782129.chunk.css",
+    "main.js": "/testing-work-for-atoms/static/js/main.9d2adae1.chunk.js",
+    "main.js.map": "/testing-work-for-atoms/static/js/main.9d2adae1.chunk.js.map",
     "runtime-main.js": "/testing-work-for-atoms/static/js/runtime-main.94a3994c.js",
     "runtime-main.js.map": "/testing-work-for-atoms/static/js/runtime-main.94a3994c.js.map",
     "static/js/2.da2e13b8.chunk.js": "/testing-work-for-atoms/static/js/2.da2e13b8.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.c5f8b945.chunk.js": "/testing-work-for-atoms/static/js/3.c5f8b945.chunk.js",
     "static/js/3.c5f8b945.chunk.js.map": "/testing-work-for-atoms/static/js/3.c5f8b945.chunk.js.map",
     "index.html": "/testing-work-for-atoms/index.html",
-    "static/css/main.956afcee.chunk.css.map": "/testing-work-for-atoms/static/css/main.956afcee.chunk.css.map",
+    "static/css/main.7c782129.chunk.css.map": "/testing-work-for-atoms/static/css/main.7c782129.chunk.css.map",
     "static/js/2.da2e13b8.chunk.js.LICENSE.txt": "/testing-work-for-atoms/static/js/2.da2e13b8.chunk.js.LICENSE.txt",
     "static/media/App.css": "/testing-work-for-atoms/static/media/pfdintextcondpro-regular.9661a62d.woff",
     "static/media/attention.b42f08e3.svg": "/testing-work-for-atoms/static/media/attention.b42f08e3.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.94a3994c.js",
     "static/js/2.da2e13b8.chunk.js",
-    "static/css/main.956afcee.chunk.css",
-    "static/js/main.eabaaa93.chunk.js"
+    "static/css/main.7c782129.chunk.css",
+    "static/js/main.9d2adae1.chunk.js"
   ]
 }
