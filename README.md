@@ -3,7 +3,7 @@
 <p align="center"></p>
 <p align="center">https://vlsrnd.github.io/testing-work-for-atoms/</p>
 
-<p align="center"><img src="https://i.ibb.co/GR4LsnP/test-atoms-preview-min.png" width="550" height="312" alt="preview"></p>
+<p align="center"><img src="https://i.ibb.co/GR4LsnP/test-atoms-preview-min.png" alt="preview"></p>
 
 <p>
 What was used:
